@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title>{{ group_name }}</title>
+  <meta name="description" content="">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/styles/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template -->}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+  <link rel="shortcut icon" href="https://l.jusl.ru/img/favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="Click">
+  <meta property="og:type" content="website">
+
+  <meta property="og:description" content="Jusl.ru - умный сервис создания диплинков и микролендингов.">
+
+
+  <meta property="og:image"
+    content="//l.jusl.ru/files/5db9694bd3d39802ca5dcad8/07d74b15-27ba-46b6-873a-10e961ff71a0.jpg">
+</head>
+
+<body>
+
+  <div class="join-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="logo"><a href="#"><img src="../static/logos/logo7.svg" alt=""></a></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="top-divider"></div>
+        </div>
+      </div>
+
+    {% for page in pages %}
+    <div class="row soc-cards-row justify-content-center">
+      <div class="col-lg-7">
+        <div class="soc-href-card {{ get_item(page.real_link, 'class') }} soc-href-card-only-header">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-3 card-img">
+              <img src="{{ get_item(page.real_link, 'logo') }}" alt="">
+            </div>
+            <div class="col-lg-8 col-md-8 col-9 card-name">
+              <div class="row align-items-center" style="height: 100%;">
+                <div class="col">
+                  <p>{{ page.link }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="{{ page.real_link }}" class="absolute-href"></a>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="powered">
+            <a href="#"><img src="../static/logos/logo4.svg"
+                alt=""></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="head-color"></div>
+  </div>
+
+<script src="../static/styles/jquery-3.3.1.min.js"></script>
+<script src="../static/styles/bootstrap.bundle.min.js"></script>
+<script>
+    $.ajax({
+        url: "/block/get",
+        type: "get",
+        success: function (response) {
+                $("#btn-first").html(response);
+        }
+    })
+</script>
+
+</body>
+</html>
