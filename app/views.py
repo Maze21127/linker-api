@@ -1,9 +1,14 @@
 
-from flask import render_template, request, flash, redirect, url_for
+from flask import render_template, request, redirect
 from app import app
-from app.models import db, Url, Group
-from app.services.group import create_group, get_page_for_group, get_pages_for_group
+from app.models import Url, Group
+from app.services.group import create_group, get_pages_for_group
 from app.services.link import create_link
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return "<h1>Working</h1>"
 
 
 @app.route('/<link>', methods=['GET'])
