@@ -37,10 +37,12 @@ def check_link(redirect_link):
 def create_link_page():
     form = request.form
     group_id = form['group'] if 'group' in form.keys() else None
-    create_link(form['source'], form['link'], group_id)
+    status = create_link(form['source'], form['link'], group_id)
 
     return {"status": "created",
-            "code": 201}
+            "code": 201} if status else \
+        {"status": "already already_exists",
+            "code": 401}
 
 
 @app.route('/api/v1/create_group/', methods=['POST'])
