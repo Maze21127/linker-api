@@ -70,7 +70,7 @@ DEFAULT = {
 def get_item(url: str, content_type: str):
     for key, value in DEFAULT.items():
         if url.startswith(value):
-            return DEFAULT[key][content_type]
+            return ITEMS[key][content_type]
 
     for key in ITEMS:
         if key in url:
