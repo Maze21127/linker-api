@@ -1,6 +1,6 @@
 
 from flask import render_template, request, redirect
-from app import app
+from app import app, logger
 from app.models import Url, Group
 from app.services.group import create_group, get_pages_for_group
 from app.services.link import create_link
@@ -14,7 +14,7 @@ def index():
 @app.route('/<link>', methods=['GET'])
 def redirect_test(link):
     ip = request.headers.get('X-Forwarded-For', request.remote_addr)
-    print(ip)
+    logger.debug(ip)
     group = Group.query.filter_by(name=link).first()
     if group is None:
         source_link = Url.query.filter_by(link=link).first()
