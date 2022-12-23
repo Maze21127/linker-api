@@ -13,9 +13,10 @@ def index():
 
 @app.route('/<link>', methods=['GET'])
 def redirect_test(link):
+    ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    print(ip)
     group = Group.query.filter_by(name=link).first()
     if group is None:
-        print(f"No group found {link}")
         source_link = Url.query.filter_by(link=link).first()
         if source_link is None:
             return "Такой страницы еще нет, но вы можете её купить здесь..."
