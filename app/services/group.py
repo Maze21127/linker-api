@@ -18,7 +18,7 @@ def get_page_for_group(group: Group):
 <h1>Group.name {group.name}</h1>
 <h1>Group.tg_id {group.tg_id}</h1>
 """
-    pages = Url.query.filter_by(group_id=group.id).all()
+    pages = sorted(Url.query.filter_by(group_id=group.id), key=lambda x: x.id)
     for page in pages:
         base += f'<a href="{page.real_link}">{page.link}</a>\n'
     return base

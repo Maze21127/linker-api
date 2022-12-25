@@ -47,6 +47,10 @@ ITEMS = {
         'logo': '../static/logos/ic_tik-tok.png',
         'class': 'soc-href-card-tik-tok'
     },
+    'dns': {
+        'logo': '../static/logos/ic_dns.png',
+        'class': 'soc-href-card-dns'
+    },
     '2gis': {
         'logo': '../static/logos/ic_2gis.png',
         'class': 'soc-href-card-2gis'

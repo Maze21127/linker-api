@@ -278,6 +278,11 @@ body {
 .soc-cards-row .soc-href-card-ok {
   background-image: linear-gradient(134deg, #ed8512 0%, #e9a71f 100%);
 }
+
+.soc-cards-row .soc-href-card-dns {
+  background-image: linear-gradient(134deg, #ed8512 0%, #e9a71f 100%);
+}
+
 .soc-cards-row .soc-href-card-2gis {
   background-image: linear-gradient(134deg, #afeb6d 0%, #74dd15 100%);
 }
