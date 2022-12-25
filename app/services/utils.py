@@ -51,7 +51,7 @@ ITEMS = {
         'logo': '../static/logos/ic_dns.png',
         'class': 'soc-href-card-dns'
     },
-    'fapost': {
+    'farpost': {
         'logo': '../static/logos/ic_dns.png',
         'class': 'soc-href-card-farpost'
     },
