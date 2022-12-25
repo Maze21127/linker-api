@@ -12,5 +12,5 @@ if __name__ == '__main__':
     if DEV:
         app.run(port=6571, debug=True)
     else:
-        logger.info("")
+        logger.info("App starting...")
         serve(app, host="0.0.0.0", port=6571)
