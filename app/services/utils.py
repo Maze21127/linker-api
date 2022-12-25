@@ -51,6 +51,14 @@ ITEMS = {
         'logo': '../static/logos/ic_dns.png',
         'class': 'soc-href-card-dns'
     },
+    'fapost': {
+        'logo': '../static/logos/ic_dns.png',
+        'class': 'soc-href-card-farpost'
+    },
+    'ozon': {
+        'logo': '../static/logos/ic_dns.png',
+        'class': 'soc-href-card-ozon'
+    },
     '2gis': {
         'logo': '../static/logos/ic_2gis.png',
         'class': 'soc-href-card-2gis'

@@ -280,7 +280,14 @@ body {
 }
 
 .soc-cards-row .soc-href-card-dns {
-  background-image: linear-gradient(134deg, #ed8512 0%, #e9a71f 100%);
+  background-image: linear-gradient(134deg, #ff9d14 0%, #ff9b16 100%);
+}
+.soc-cards-row .soc-href-card-farpost {
+  background-image: linear-gradient(134deg, #f56302 0%, #f56302 100%);
+}
+
+.soc-cards-row .soc-href-card-ozon {
+  background-image: linear-gradient(134deg, #005aff 0%, #f81155 100%);
 }
 
 .soc-cards-row .soc-href-card-2gis {
