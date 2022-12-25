@@ -12,5 +12,6 @@ DB_USER = getenv("DB_USER")
 DB_PASSWORD = getenv("DB_PASSWORD")
 # Имя базы данных
 DB_NAME = getenv("DB_NAME")
+PORT = getenv("PORT")
 
 DEV = True if getenv("DEV") == "True" else False

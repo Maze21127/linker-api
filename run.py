@@ -2,7 +2,7 @@ from app import app, logger
 from app.models import db
 from waitress import serve
 
-from settings import DEV
+from settings import DEV, PORT
 
 if __name__ == '__main__':
     db.init_app(app)
@@ -10,7 +10,7 @@ if __name__ == '__main__':
         db.create_all()
         db.session.commit()
     if DEV:
-        app.run(port=6571, debug=True)
+        app.run(port=PORT, debug=True)
     else:
         logger.info("App starting...")
-        serve(app, host="0.0.0.0", port=6571)
+        serve(app, host="0.0.0.0", port=PORT)
