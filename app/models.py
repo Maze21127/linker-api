@@ -10,7 +10,7 @@ class Url(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     link = db.Column(db.String(255), unique=True)
-    real_link = db.Column(db.String(255))
+    real_link = db.Column(db.String(4096))
     uses = db.Column(db.Integer, default=0)
 
     group_id = db.Column(db.BigInteger, db.ForeignKey("groups.id"))

@@ -62,14 +62,22 @@ ITEMS = {
 }
 
 DEFAULT = {
-    "ok": "https://ok.ru",
-    "youtube": "https://youtu.be"
+    "ok": {
+        'link': "https://ok.ru",
+        'logo': '../static/logos/ic_ok.png',
+        'class': 'soc-href-card-ok'
+    },
+    "youtube": {
+        'link': "https://youtu.be",
+        'logo': '../static/logos/ic_ok.png',
+        'class': 'soc-href-card-ok'
+    },
 }
 
 
 def get_item(url: str, content_type: str):
     for key, value in DEFAULT.items():
-        if url.startswith(value):
+        if url.startswith(value['link']):
             return ITEMS[key][content_type]
 
     for key in ITEMS:

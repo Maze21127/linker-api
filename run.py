@@ -1,4 +1,4 @@
-from app import app
+from app import app, logger
 from app.models import db
 from waitress import serve
 
@@ -12,4 +12,5 @@ if __name__ == '__main__':
     if DEV:
         app.run(port=6571, debug=True)
     else:
+        logger.info("")
         serve(app, host="0.0.0.0", port=6571)
